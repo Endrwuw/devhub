@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevHub Romania</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #eee;
+            margin: 0;
+        }
+        header {
+            background: #2c3e50;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #eee;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #1abc9c;
+        }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #1abc9c;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #1abc9c;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        footer {
+            background: #2c3e50;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DevHub Romania</h1>
+    <nav>
+        <a href="#" onclick="showSection('home')">Acasă</a>
+        <a href="#" onclick="showSection('rules')">Regulament</a>
+        <a href="#" onclick="showSection('staff')">Lista Staff</a>
+        <a href="#" onclick="showSection('shop')">Shop</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Bine ai venit pe DevHub Romania!</h2>
+    <p>Serverul nostru este locul perfect pentru pasionații de dezvoltare și gaming. Alătură-te comunității noastre pentru a învăța, colabora și distra!</p>
+</section>
+
+<section id="rules" class="hidden">
+    <h2>Regulament și Informații Staff</h2>
+    <ul>
+        <li>Respectă regulile comunității.</li>
+        <li>Stafful trebuie să fie activ și responsabil.</li>
+        <li>Comunică clar și ajută membrii comunității.</li>
+        <li>Fără abuz de putere.</li>
+    </ul>
+</section>
+
+<section id="staff" class="hidden">
+    <h2>Lista Staff</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nume</th>
+                <th>Rol</th>
+                <th>Online</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Andrei</td><td>Admin</td><td>Da</td></tr>
+            <tr><td>Maria</td><td>Moderator</td><td>Nu</td></tr>
+            <tr><td>Ion</td><td>Support</td><td>Da</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="shop" class="hidden">
+    <h2>Shop DevHub Romania</h2>
+    <p>Accesează magazinul nostru online pentru a cumpăra iteme exclusive și beneficii în server!</p>
+    <ul>
+        <li>Rank VIP - 20 RON</li>
+        <li>Kit-ul starter - 10 RON</li>
+        <li>Acces la evenimente speciale - 30 RON</li>
+    </ul>
+    <p><em>Mai multe detalii vor urma aici.</em></p>
+</section>
+
+<footer>
+    &copy; 2025 DevHub Romania
+</footer>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+        document.getElementById(id).classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
